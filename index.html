@@ -1,5 +1,6 @@
-<head>
-<!-- Meta Pixel Code -->
+CBQ code in page
+Target:  ggonzalez93973 - Tenant for test@ > Signals Gateway Pixel 01 T0 
+1PPixel:  1PP 8527507838759039541 > MP 516154447617796 (TP60)
 <!-- Signals Gateway Pixel Code -->
   <script>
   !function(a,h,e,v,n,t,s)
@@ -15,7 +16,6 @@
     cbq('track', 'PageView');
   </script>
     <!-- End Signals Gateway Pixel Code -->
-<!-- End Meta Pixel Code -->
 <meta name="facebook-domain-verification" content="qowwrhpyni79cf2pms3zixyrxoh3b4" />
 <title>pixel test page</title>
 </head>
@@ -29,17 +29,25 @@
         <li><button id="purchaseButton" type="button">Purchase</button></li>
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
         <li><button id="registrationButton" type="button">Registration</button></li>
-        <li><button id="unverifiedEvent_button" type="button">unverifiedEvent</button></li>
+
+<!-- Integrity Testing --> 
+<li><button id="unverifiedEvent_button" type="button">unverifiedEvent</button></li>
+<!-- Integrity Testing -->
+      
     </ul>
     </div>
-
 <script type="text/javascript">
+
+// <!-- Integrity Testing -->
+document.getElementById('unverifiedEvent_button').addEventListener('click', function() {cbq('track', 'unverifiedEvent', {value: 100,currency: 'USD',ssn:'11223333'  }) }, false);
+// <!-- Integrity Testing -->
+  
 document.getElementById('addToWishlistButton').addEventListener('click', function() {
   cbq('track', 'AddToWishlist');
 }, false);
 
 document.getElementById('addToCartButton').addEventListener('click', function() {
-  cbq('track', 'CustomEvent2');
+  cbq('track', 'AddToCart');
 }, false);
 
 document.getElementById('checkoutButton').addEventListener('click', function() {
@@ -47,8 +55,8 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
 }, false);
 
 document.getElementById('purchaseButton').addEventListener('click', function() {
- cbq('track', 'Purchase', {
-    value: "fdsfkdf",
+  cbq('track', 'Purchase', {
+ //   value: 'fdsjflds',
     currency: 'USD',
   });
 }, false);
@@ -60,10 +68,6 @@ document.getElementById('subcribeButton').addEventListener('click', function() {
 document.getElementById('registrationButton').addEventListener('click', function() {
   cbq('track', 'CompleteRegistration');
 }, false);
-    document.getElementById('unverifiedEvent_button').addEventListener('click', function()
-{cbq('track', 'unverifiedEvent', {
-    value: 100,currency: 'USD',
-    ssn:'11223333'  }) }, 
-    false);
+
 </script>
 </body>
